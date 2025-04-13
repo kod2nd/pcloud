@@ -314,7 +314,7 @@ class PyCloud(object):
 
     # Streaming
     def getfilelink(self, **kwargs):
-        raise OnlyPcloudError(ONLY_PCLOUD_MSG)
+        return self._do_request("getfilelink", **kwargs)
 
     def getvideolink(self, **kwargs):
         raise OnlyPcloudError(ONLY_PCLOUD_MSG)
